@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打造幸福企業：工作與生活平衡補助計畫提案</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- Google Fonts (Noto Sans TC) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome (Webfonts only, no SVG output) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0fdfa; /* Light Teal Background */
+            color: #134e4a; /* Dark Teal Text */
+        }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0d9488; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0f766e; 
+        }
+
+        /* Timeline CSS (No SVG) */
+        .timeline-line {
+            border-left: 4px solid #0d9488;
+        }
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background-color: #f97316; /* Coral Orange */
+            border-radius: 50%;
+            position: absolute;
+            left: -12px;
+            top: 6px;
+            border: 3px solid #fff;
+        }
+    </style>
+
+    <!-- 
+    NARRATIVE PLAN:
+    1. Hook: The problem (Workplace Stress) vs. The Solution (Family-Friendly Measures).
+    2. Data: Why do this? (Retention/ESG).
+    3. The Solution: The 4 Specific Courses (Massage, Aroma, Farm, Resilience).
+    4. The Benefit: Radar chart showing holistic impact.
+    5. The Money: Subsidy breakdown (90% covered).
+    6. The Plan: Timeline and One-Stop Service.
+    -->
+
+    <!--
+    CHART SELECTION JUSTIFICATION (NO SVG):
+    1. Workplace Challenge -> Goal: Inform -> Donut Chart (Chart.js) -> Shows burnout % clearly.
+    2. Course Comparison -> Goal: Compare -> Radar Chart (Chart.js) -> Shows multi-dimensional benefits (Physical, Mental, Family, ESG).
+    3. Subsidy Structure -> Goal: Compare -> Stacked Bar Chart (Chart.js) -> Visually demonstrates the massive government contribution vs. company cost.
+    4. Timeline -> Goal: Change/Process -> CSS Vertical Layout -> Clear chronological flow without using SVG.
+    -->
+
+    <!-- PALETTE: Energetic Teal & Coral -->
+</head>
+<body class="antialiased selection:bg-teal-200 selection:text-teal-900">
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-teal-600 to-teal-800 text-white pt-16 pb-24 px-4 shadow-lg rounded-b-[3rem]">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 shadow-md tracking-wider">
+                SDG 3 健康與福祉 | ESG 社會責任
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                打造幸福企業<br>
+                <span class="text-teal-200">工作與生活平衡提案</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 max-w-3xl mx-auto mb-8">
+                這不僅是一堂健康課程，更是凝聚員工家庭情感的「友善家庭措施」。讓政府幫您照顧員工的身心健康。
+            </p>
+            <div class="flex justify-center gap-4">
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+                    <p class="text-3xl font-bold text-orange-400">NT$ 20 萬</p>
+                    <p class="text-sm">最高補助金額</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+                    <p class="text-3xl font-bold text-orange-400">90%</p>
+                    <p class="text-sm">政府補助比例</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto -mt-16 px-4 pb-20 grid grid-cols-1 gap-12 relative z-10">
+
+        <!-- Section 1: The Challenge (Data Overview) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Text Card -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 border-l-8 border-orange-500 hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-teal-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation mr-3 text-orange-500"></i>
+                    現代職場挑戰與 ESG 新標準
+                </h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    高壓環境導致職業倦怠與流動率增加。真正的「留才」不僅靠薪資，更需要建立情感的「向心力」。落實「友善家庭措施」已非選項，而是企業永續經營與符合社會責任 (Social Criteria) 的關鍵指標。
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-teal-500 mt-1 mr-2"></i>
+                        <span class="text-gray-700"><strong>職業倦怠：</strong> 影響家庭關係，導致人才流失。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-teal-500 mt-1 mr-2"></i>
+                        <span class="text-gray-700"><strong>解決方案：</strong> 照顧員工的家庭，就是照顧員工的產值。</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Visualization Card -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center">
+                <h3 class="text-lg font-semibold text-gray-500 mb-4 text-center">員工壓力來源與影響分析</h3>
+                <div class="chart-container">
+                    <canvas id="stressChart"></canvas>
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">數據來源：職場健康相關研究模擬數據</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Four Pillars (Course Offerings) -->
+        <section class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-teal-800 mb-2">四大專屬課程方案</h2>
+                <p class="text-gray-500">符合勞動部「友善家庭措施」規範 | 強調員眷互動</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Course 1 -->
+                <div class="bg-teal-50 rounded-xl p-6 border border-teal-100 hover:bg-teal-100 transition">
+                    <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-teal-900 mb-2">幸福力養成</h3>
+                    <p class="text-sm text-teal-600 font-semibold mb-2">經絡舒壓 x 疲勞辨識</p>
+                    <p class="text-gray-600 text-sm">學習簡易居家鬆筋手法，透過肢體接觸傳遞關愛，建立家庭健康習慣。</p>
+                </div>
+                <!-- Course 2 -->
+                <div class="bg-orange-50 rounded-xl p-6 border border-orange-100 hover:bg-orange-100 transition">
+                    <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-teal-900 mb-2">香氛心關係</h3>
+                    <p class="text-sm text-orange-600 font-semibold mb-2">情緒調節 x 精油療癒</p>
+                    <p class="text-gray-600 text-sm">家庭成員共同調配專屬香氛，釋放深層焦慮，強化情感支持系統。</p>
+                </div>
+                <!-- Course 3 -->
+                <div class="bg-teal-50 rounded-xl p-6 border border-teal-100 hover:bg-teal-100 transition">
+                    <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-teal-900 mb-2">綠動家庭</h3>
+                    <p class="text-sm text-teal-600 font-semibold mb-2">五感體驗 x 自然療癒</p>
+                    <p class="text-gray-600 text-sm">結合 ESG 永續精神，走入自然環境，透過食農教育創造共同回憶。</p>
+                </div>
+                <!-- Course 4 -->
+                <div class="bg-orange-50 rounded-xl p-6 border border-orange-100 hover:bg-orange-100 transition">
+                    <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-teal-900 mb-2">韌性家庭</h3>
+                    <p class="text-sm text-orange-600 font-semibold mb-2">情緒急救 x 壓力管理</p>
+                    <p class="text-gray-600 text-sm">建立員工與眷屬的支持團體，讓另一半理解工作挑戰，達成身心平衡。</p>
+                </div>
+            </div>
+
+            <!-- Radar Chart Analysis -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold text-teal-800 mb-4">全方位效益分析</h3>
+                    <p class="text-gray-600 mb-4">
+                        我們的課程設計不僅關注個人健康，更延伸至家庭關係與社會責任。透過右圖可見各課程在不同維度上的強項。
+                    </p>
+                    <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                        <p class="text-sm font-bold text-gray-700 mb-2">維度說明：</p>
+                        <ul class="text-xs space-y-1 text-gray-600">
+                            <li>• <strong>身體健康：</strong> 緩解生理疲勞</li>
+                            <li>• <strong>心理韌性：</strong> 壓力與情緒管理</li>
+                            <li>• <strong>家庭互動：</strong> 增進親子/夫妻關係</li>
+                            <li>• <strong>ESG 指標：</strong> 符合永續發展目標</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <div class="chart-container">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Financials (Subsidy) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Financial Chart -->
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h3 class="text-lg font-semibold text-gray-500 mb-4 text-center">投入成本效益分析 (90% 補助)</h3>
+                <div class="chart-container">
+                    <canvas id="subsidyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Financial Text -->
+            <div class="bg-gradient-to-br from-teal-700 to-teal-900 rounded-2xl shadow-xl p-8 text-white flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-4">善用政府資源，成本政府買單</h2>
+                <p class="text-teal-100 mb-6 text-lg">
+                    企業辦理高規格福利，不再需要擔心預算壓力。勞動部全額支持您的「幸福企業」計畫。
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="border-l-4 border-orange-500 pl-4">
+                        <p class="text-sm text-teal-200">年度最高額度</p>
+                        <p class="text-2xl font-bold">NT$ 200,000</p>
+                    </div>
+                    <div class="border-l-4 border-orange-500 pl-4">
+                        <p class="text-sm text-teal-200">企業自籌款</p>
+                        <p class="text-2xl font-bold">僅需 10%</p>
+                    </div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-4">
+                    <p class="text-sm font-bold mb-2"><i class="fa-solid fa-gift mr-2 text-orange-400"></i>補助項目包含：</p>
+                    <p class="text-sm text-teal-100">講師鐘點費、場地費、餐費、活動器材費、門票費等。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Timeline -->
+        <section class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-10">年度重要時程表 & 一條龍服務</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Timeline Visualization -->
+                <div class="relative pl-8 border-l-4 border-teal-200 space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <h4 class="text-xl font-bold text-teal-800">Phase 1: 申請期</h4>
+                        <p class="text-orange-500 font-bold text-sm mb-2">2月1日 - 5月31日</p>
+                        <p class="text-gray-600">遞交計畫書，額滿即止！我們協助擬定符合規範的「補助實施計畫書」。</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <h4 class="text-xl font-bold text-teal-800">Phase 2: 執行期</h4>
+                        <p class="text-orange-500 font-bold text-sm mb-2">核定後 - 10月20日前</p>
+                        <p class="text-gray-600">依企業需求排課辦理。專業講師群實地授課，包含所有材料配置。</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <h4 class="text-xl font-bold text-teal-800">Phase 3: 核銷期</h4>
+                        <p class="text-orange-500 font-bold text-sm mb-2">課程結束後</p>
+                        <p class="text-gray-600">整理照片紀錄、成果報告，確保順利核銷領取補助款。</p>
+                    </div>
+                </div>
+
+                <!-- Service Pitch -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                    <h3 class="text-xl font-bold text-teal-800 mb-4">HR 零負擔執行</h3>
+                    <p class="text-gray-600 mb-6">我們了解申請公部門補助的行政繁瑣，專業團隊將全程代辦，您只需決定日期。</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                            <i class="fa-solid fa-file-pen text-teal-500 w-8 text-center text-xl"></i>
+                            <span class="ml-3 font-semibold text-gray-700">計畫書撰寫</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                            <i class="fa-solid fa-file-invoice-dollar text-teal-500 w-8 text-center text-xl"></i>
+                            <span class="ml-3 font-semibold text-gray-700">單據核銷整理</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                            <i class="fa-solid fa-chalkboard-user text-teal-500 w-8 text-center text-xl"></i>
+                            <span class="ml-3 font-semibold text-gray-700">專業師資派遣</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                        <p class="text-sm text-gray-500 mb-2">立即預約諮詢</p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+                            聯絡我們
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-teal-300 py-8 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="font-bold text-white mb-2">「給員工最好的禮物，不是獎金，而是讓身心靈徹底放鬆的家庭時光。」</p>
+            <p class="text-sm opacity-70">本計畫依據勞動部「推動工作與生活平衡補助計畫」辦理</p>
+            <div class="mt-6 flex justify-center space-x-6 text-2xl">
+                <i class="fa-brands fa-line hover:text-white cursor-pointer transition"></i>
+                <i class="fa-solid fa-envelope hover:text-white cursor-pointer transition"></i>
+                <i class="fa-solid fa-phone hover:text-white cursor-pointer transition"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Charts -->
+    <script>
+        // --- 1. Label Wrapping Helper (Strict Requirement) ---
+        function formatLabel(str, maxwidth) {
+            if (typeof str !== 'string') return str;
+            if (str.length <= maxwidth) return str;
+            
+            var sections = [];
+            var words = str.split(" ");
+            var temp = "";
+            
+            words.forEach(function(item, index) {
+                if (temp.length > 0) {
+                    var concat = temp + ' ' + item;
+                    if (concat.length > maxwidth){
+                        sections.push(temp);
+                        temp = "";
+                    } else {
+                        if (index == (words.length-1)) {
+                            sections.push(concat);
+                            return;
+                        } else {
+                            temp = concat;
+                            return;
+                        }
+                    }
+                }
+                if (index == (words.length-1)) {
+                    sections.push(item);
+                    return;
+                }
+                if (item.length < maxwidth) {
+                    temp = item;
+                } else {
+                    sections.push(item);
+                }
+            });
+            
+            // Fallback for long strings without spaces (like Chinese sometimes)
+            if(sections.length === 0 && str.length > maxwidth){
+                 // Simple chunking for Chinese
+                 for(let i=0; i < str.length; i += maxwidth) {
+                     sections.push(str.substring(i, i + maxwidth));
+                 }
+            } else if (sections.length === 0) {
+                 sections.push(str);
+            }
+
+            return sections;
+        }
+
+        // --- 2. Chart Global Defaults ---
+        Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+        Chart.defaults.color = '#334155';
+        Chart.defaults.maintainAspectRatio = false; // Crucial for responsive containers
+
+        // --- 3. Chart Implementations ---
+
+        // Chart 1: Donut Chart - The Problem
+        const ctxStress = document.getElementById('stressChart').getContext('2d');
+        const stressChart = new Chart(ctxStress, {
+            type: 'doughnut',
+            data: {
+                labels: ['職業倦怠高風險', '影響家庭關係', '考慮離職', '身心平衡良好'],
+                datasets: [{
+                    data: [45, 30, 15, 10], // Mock data based on narrative
+                    backgroundColor: [
+                        '#f97316', // Orange (Burnout)
+                        '#fb923c', // Light Orange
+                        '#fdba74', // Lighter Orange
+                        '#0d9488'  // Teal (Balance)
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Radar Chart - The Course Benefits
+        const ctxRadar = document.getElementById('radarChart').getContext('2d');
+        
+        // Prepare Labels
+        const rawRadarLabels = ['身體健康 (Physical)', '心理韌性 (Mental)', '家庭互動 (Family)', 'ESG 影響力 (Sustainability)'];
+        const processedRadarLabels = rawRadarLabels.map(l => formatLabel(l, 16));
+
+        const radarChart = new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: processedRadarLabels,
+                datasets: [
+                    {
+                        label: '幸福力養成 (經絡)',
+                        data: [90, 60, 80, 70],
+                        fill: true,
+                        backgroundColor: 'rgba(13, 148, 136, 0.2)',
+                        borderColor: '#0d9488',
+                        pointBackgroundColor: '#0d9488',
+                    },
+                    {
+                        label: '香氛心關係 (精油)',
+                        data: [60, 95, 75, 70],
+                        fill: true,
+                        backgroundColor: 'rgba(249, 115, 22, 0.2)',
+                        borderColor: '#f97316',
+                        pointBackgroundColor: '#f97316',
+                    },
+                    {
+                        label: '綠動家庭 (農事)',
+                        data: [70, 80, 90, 95],
+                        fill: false, // Keep it cleaner
+                        borderColor: '#14b8a6', // Lighter Teal
+                        borderDash: [5, 5],
+                        pointBackgroundColor: '#14b8a6',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: '#e2e8f0' },
+                        grid: { color: '#e2e8f0' },
+                        pointLabels: {
+                            font: { size: 11, weight: 'bold' },
+                            color: '#0f766e'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Stacked Bar - The Subsidy
+        const ctxSubsidy = document.getElementById('subsidyChart').getContext('2d');
+        const subsidyChart = new Chart(ctxSubsidy, {
+            type: 'bar',
+            data: {
+                labels: ['活動總價值', '企業實際負擔'],
+                datasets: [
+                    {
+                        label: '政府補助 (90%)',
+                        data: [200000, 0], 
+                        backgroundColor: '#0d9488',
+                    },
+                    {
+                        label: '企業自籌 (10%)',
+                        data: [22222, 22222], // Approx calculation: If subsidy is 200k (90%), total is ~222k. Or if limit is 200k subsidy. 
+                        // Let's assume 200k is the subsidy cap. So total project can be ~220k.
+                        backgroundColor: '#f97316',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true },
+                    y: { 
+                        stacked: true,
+                        ticks: {
+                            callback: function(value) { return 'NT$' + value/1000 + 'k'; }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
