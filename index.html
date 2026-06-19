@@ -1,233 +1,474 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>清新如初．郁見平衡</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	
-	<body class="is-preload">
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>清郁 QING YU｜深層筋膜放鬆</title>
+  <meta name="description" content="清郁專注於每一吋筋膜的呼吸，運用天然牛角與砭石，化解日積月累的僵硬，讓身體重新找回平衡。" />
+  <meta property="og:title" content="清郁 QING YU｜深層筋膜放鬆" />
+  <meta property="og:description" content="釋放深層緊繃，讓身體重新呼吸。" />
+  <meta property="og:image" content="images/bg.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-900: #1f3428;
+      --green-800: #2f4b38;
+      --green-700: #47684f;
+      --green-600: #688768;
+      --green-100: #eef4ea;
+      --cream: #fbf7ef;
+      --cream-2: #f5eee1;
+      --gold: #b9915a;
+      --brown: #6f543d;
+      --ink: #263126;
+      --muted: #6f766d;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(34, 56, 38, .13);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max: 1160px;
+    }
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">探索清郁</a></li>
-							<li><a href="#two">專業服務</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    .nav {
+      position: fixed;
+      inset: 18px 22px auto;
+      z-index: 30;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 14px 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border: 1px solid rgba(255,255,255,.68);
+      border-radius: 999px;
+      background: rgba(255, 252, 244, .82);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 12px 36px rgba(31, 52, 40, .10);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Noto Serif TC", serif;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--green-900);
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-700), #d9c291);
+      display: grid; place-items: center;
+      color: white;
+      box-shadow: 0 8px 20px rgba(71,104,79,.28);
+    }
+    .brand span small {
+      display: block;
+      margin-top: -6px;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 10px;
+      letter-spacing: .24em;
+      color: var(--green-600);
+    }
+    .nav-links { display: flex; align-items: center; gap: 4px; font-size: 15px; color: var(--green-800); }
+    .nav-links a { padding: 10px 13px; border-radius: 999px; transition: .2s ease; }
+    .nav-links a:hover { background: var(--green-100); }
+    .nav-cta { background: var(--green-800); color: white !important; box-shadow: 0 10px 22px rgba(47,75,56,.22); }
+    .nav-cta:hover { background: var(--green-900) !important; }
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>清郁 ‧ 舒活美學</h1>
-							<p>清心如初，郁見平衡 </p>
-							<ul class="actions">
-								<a href="https://line.me/ti/p/~你的ID" class="button primary" style="background-color: #06C755; color: white; border-radius: 50px;">
-            <i class="fab fa-line"></i> 立即預約LINE諮詢
-        </a>
-								<li><a href="#one" class="button scrolly">了解詳情</a></li>
-								<ul class="actions">
-    <li>
-        
-    </li>
-</ul>
-							</ul>
-						</div>
-					</section>
-<section>
-    <h2>教學影片</h2>
-    <div class="box">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <iframe 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" 
-                src="https://www.youtube.com/embed/YI5CT-dGHsU" 
-                title="YouTube video player" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      padding: 132px 24px 84px;
+      background:
+        linear-gradient(90deg, rgba(251,247,239,.96) 0%, rgba(251,247,239,.86) 42%, rgba(251,247,239,.30) 72%, rgba(251,247,239,.18) 100%),
+        url('images/bg.png') center / cover no-repeat;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 160px;
+      background: linear-gradient(180deg, transparent, var(--cream));
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; width: min(100%, var(--max)); margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid rgba(104,135,104,.32);
+      border-radius: 999px;
+      color: var(--green-700);
+      background: rgba(255,255,255,.62);
+      font-weight: 700;
+      letter-spacing: .12em;
+      font-size: 14px;
+    }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+    h1, h2, h3, h4 { font-family: "Noto Serif TC", serif; line-height: 1.25; margin: 0; color: var(--green-900); }
+    h1 { margin-top: 26px; font-size: clamp(42px, 7vw, 88px); letter-spacing: .04em; max-width: 780px; }
+    .hero p { max-width: 620px; margin: 24px 0 0; color: #4f5d51; font-size: clamp(18px, 2.2vw, 23px); }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(47,75,56,.20);
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--green-800); color: white; box-shadow: 0 16px 36px rgba(47,75,56,.22); }
+    .btn-primary:hover { background: var(--green-900); }
+    .btn-secondary { background: rgba(255,255,255,.68); color: var(--green-800); }
+
+    section { padding: 96px 24px; }
+    .container { width: min(100%, var(--max)); margin: 0 auto; }
+    .section-head { margin-bottom: 42px; display: grid; gap: 12px; }
+    .label { color: var(--gold); letter-spacing: .22em; font-size: 13px; font-weight: 800; }
+    h2 { font-size: clamp(32px, 4vw, 52px); }
+    .lead { color: var(--muted); max-width: 760px; font-size: 18px; }
+
+    .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 42px; align-items: center; }
+    .image-card {
+      min-height: 520px;
+      border-radius: var(--radius-xl);
+      background: url('images/bg.png') center / cover no-repeat;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(31,52,40,.05), rgba(31,52,40,.36)); }
+    .about-copy { display: grid; gap: 18px; }
+    .about-copy p { margin: 0; color: #586358; font-size: 17px; }
+    .pillars { display: grid; gap: 16px; margin-top: 22px; }
+    .pillar {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 16px 40px rgba(40, 61, 44, .07);
+      border: 1px solid rgba(104,135,104,.13);
+    }
+    .num {
+      width: 54px; height: 54px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--green-100);
+      color: var(--green-700);
+      font-family: "Noto Serif TC", serif;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    .pillar h3 { font-size: 21px; margin-bottom: 4px; }
+    .pillar p { font-size: 15px; }
+
+    .soft { background: linear-gradient(180deg, var(--cream), var(--cream-2)); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      position: relative;
+      padding: 30px;
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(104,135,104,.13);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--green-600), #d7be82);
+    }
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #f3ead8;
+      color: var(--brown);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .card h3 { font-size: 25px; }
+    .meta { display: flex; justify-content: space-between; gap: 12px; margin: 16px 0; color: var(--green-700); font-weight: 800; }
+    .price { color: var(--gold); font-size: 24px; font-family: "Noto Serif TC", serif; }
+    .card p { color: var(--muted); margin: 0 0 24px; }
+
+    .process-wrap { margin-top: 54px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .step {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: rgba(238,244,234,.86);
+      border: 1px solid rgba(104,135,104,.16);
+    }
+    .step b { display: block; color: var(--gold); font-family: "Noto Serif TC", serif; font-size: 28px; margin-bottom: 12px; }
+    .step h4 { font-size: 20px; }
+    .step p { margin: 8px 0 0; color: var(--muted); }
+
+    .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .quote { padding: 28px; border-radius: var(--radius-xl); background: white; box-shadow: var(--shadow); border: 1px solid rgba(104,135,104,.12); }
+    .stars { color: #d4a14d; letter-spacing: .1em; margin-bottom: 14px; }
+    .quote p { margin: 0; color: #586358; }
+    .avatar { margin-top: 22px; display: flex; align-items: center; gap: 12px; }
+    .avatar-icon { width: 46px; height: 46px; border-radius: 50%; background: var(--green-100); color: var(--green-700); display: grid; place-items: center; font-weight: 800; }
+    .stats { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; text-align: center; }
+    .stat { padding: 24px; border-radius: var(--radius-lg); background: rgba(255,255,255,.68); border: 1px solid rgba(104,135,104,.14); }
+    .stat strong { display: block; font-family: "Noto Serif TC", serif; color: var(--green-900); font-size: 42px; }
+    .stat span { color: var(--muted); }
+
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 28px; align-items: start; }
+    .contact-list { display: grid; gap: 16px; }
+    .info { padding: 22px; border-radius: var(--radius-lg); background: rgba(255,255,255,.72); border: 1px solid rgba(104,135,104,.14); box-shadow: 0 16px 38px rgba(40,61,44,.06); }
+    .info h3 { font-size: 20px; margin-bottom: 6px; }
+    .info p { margin: 0; color: var(--muted); }
+    .form {
+      padding: 30px;
+      border-radius: var(--radius-xl);
+      background: white;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(104,135,104,.12);
+    }
+    .form h3 { margin-bottom: 20px; }
+    .fields { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .field.full { grid-column: 1 / -1; }
+    label { display: block; margin-bottom: 7px; color: var(--green-800); font-weight: 700; font-size: 14px; }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid rgba(104,135,104,.25);
+      background: #fbfaf5;
+      border-radius: 16px;
+      padding: 13px 14px;
+      font: inherit;
+      color: var(--ink);
+      outline: none;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--green-600); box-shadow: 0 0 0 4px rgba(104,135,104,.13); }
+    .form-note { margin: 14px 0 0; color: var(--muted); font-size: 14px; }
+
+    footer { padding: 36px 24px; background: var(--green-900); color: rgba(255,255,255,.78); }
+    footer .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+    footer strong { color: white; font-family: "Noto Serif TC", serif; letter-spacing: .12em; }
+
+    .reveal { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
+
+    @media (max-width: 900px) {
+      .nav { inset: 12px 12px auto; border-radius: 26px; align-items: flex-start; }
+      .nav-links { display: none; }
+      .hero { padding-top: 112px; background-position: 58% center; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .image-card { min-height: 360px; }
+      .cards, .testimonials, .stats { grid-template-columns: 1fr; }
+      .process-wrap { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      section { padding: 72px 18px; }
+      .hero { padding-inline: 18px; }
+      .process-wrap, .fields { grid-template-columns: 1fr; }
+      .card, .form { padding: 24px; }
+      footer .container { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" aria-label="主選單">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark">清</span>
+      <span>清郁<small>QING YU</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">關於清郁</a>
+      <a href="#services">服務項目</a>
+      <a href="#testimonials">客戶見證</a>
+      <a href="#contact">聯絡我們</a>
+      <a class="nav-cta" href="#contact">立即預約</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner reveal">
+        <span class="eyebrow">深層筋膜放鬆</span>
+        <h1>釋放深層緊繃<br>讓身體重新呼吸</h1>
+        <p>清郁 —— 專注於每一吋筋膜的呼吸。<br>運用天然牛角與砭石，化解日積月累的僵硬。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">立即預約諮詢</a>
+          <a class="btn btn-secondary" href="#about">了解更多</a>
         </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="image-card reveal" role="img" aria-label="清郁筋膜放鬆空間"></div>
+        <div class="about-copy reveal">
+          <div class="section-head">
+            <span class="label">ABOUT US</span>
+            <h2>關於清郁</h2>
+          </div>
+          <p>「清郁」誕生於對身體律動的尊重。我們運用天然牛角與砭石，透過精準的撥筋技術，深入您的勞損點，化解日積月累的僵硬。</p>
+          <p>我們不只提供按摩，更致力於讓您在繁忙生活中，尋回身心平衡的清幽之地。每一次服務，都是一場與自己身體的對話。</p>
+          <div class="pillars">
+            <article class="pillar">
+              <span class="num">1</span>
+              <div><h3>天然材質</h3><p>嚴選天然牛角與砭石，溫潤觸感帶來最純粹的放鬆體驗。</p></div>
+            </article>
+            <article class="pillar">
+              <span class="num">2</span>
+              <div><h3>精準手法</h3><p>深入筋膜層次，針對勞損點進行精確的撥筋調理。</p></div>
+            </article>
+            <article class="pillar">
+              <span class="num">3</span>
+              <div><h3>身心平衡</h3><p>不只舒緩肌肉，更致力於恢復您的身心和諧。</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">SERVICES</span>
+          <h2>服務項目</h2>
+          <p class="lead">我們提供多元化的筋膜放鬆服務，每項療程皆以專業手法與天然工具，為您量身打造舒壓體驗。</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="badge">熱門推薦</span>
+            <h3>專業牛角鬆筋</h3>
+            <div class="meta"><span>60 分鐘</span><span class="price">$1,200</span></div>
+            <p>針對深層筋膜，有效緩解局部痠痛。運用天然牛角，以專業手法深入肌肉組織，釋放累積的壓力與緊繃。</p>
+            <a class="btn btn-secondary" href="#contact">預約此療程</a>
+          </article>
+          <article class="card reveal">
+            <h3>砭石舒壓療程</h3>
+            <div class="meta"><span>75 分鐘</span><span class="price">$1,500</span></div>
+            <p>結合礦石能量，促進血液循環，徹底放鬆肌肉。砭石的溫潤觸感，帶來深層的舒緩與療癒。</p>
+            <a class="btn btn-secondary" href="#contact">預約此療程</a>
+          </article>
+          <article class="card reveal">
+            <h3>客製化全身調理</h3>
+            <div class="meta"><span>90 分鐘</span><span class="price">$2,000</span></div>
+            <p>依個人疲勞程度，配置最適合的鬆筋方案。從頭到腳的完整調理，讓身體重獲輕盈。</p>
+            <a class="btn btn-secondary" href="#contact">預約此療程</a>
+          </article>
+        </div>
+
+        <div class="process-wrap reveal" aria-label="服務流程">
+          <article class="step"><b>01</b><h4>諮詢評估</h4><p>了解您的身體狀況與需求。</p></article>
+          <article class="step"><b>02</b><h4>方案規劃</h4><p>依據評估結果規劃最適療程。</p></article>
+          <article class="step"><b>03</b><h4>專業施作</h4><p>以精準手法進行深層放鬆。</p></article>
+          <article class="step"><b>04</b><h4>術後建議</h4><p>提供日常保養與伸展建議。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">TESTIMONIALS</span>
+          <h2>客戶見證</h2>
+          <p class="lead">聽聽他們的真實體驗分享，了解清郁如何幫助他們找回身體的輕盈感。</p>
+        </div>
+        <div class="testimonials">
+          <article class="quote reveal">
+            <div class="stars">★★★★★</div>
+            <p>「長期坐辦公室，肩頸痠痛困擾我好幾年。來到清郁後，師傅用牛角深層撥筋，第一次就感受到明顯改善！現在已經是固定客戶了。」</p>
+            <div class="avatar"><span class="avatar-icon">林</span><div><strong>林小姐</strong><br><span>上班族</span></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="stars">★★★★★</div>
+            <p>「工作壓力大，睡眠品質很差。嘗試了砭石舒壓療程後，當晚就睡得特別好。環境很寧靜，整個人都放鬆下來了。」</p>
+            <div class="avatar"><span class="avatar-icon">陳</span><div><strong>陳先生</strong><br><span>工程師</span></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="stars">★★★★★</div>
+            <p>「帶小孩腰痠背痛是家常便飯，朋友推薦來試試。師傅很專業，會先評估身體狀況再施作，服務很細心，大推！」</p>
+            <div class="avatar"><span class="avatar-icon">王</span><div><strong>王太太</strong><br><span>家庭主婦</span></div></div>
+          </article>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><strong>500+</strong><span>滿意客戶</span></div>
+          <div class="stat"><strong>4.9</strong><span>平均評分</span></div>
+          <div class="stat"><strong>3+</strong><span>年經驗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">CONTACT</span>
+          <h2>聯絡我們</h2>
+          <p class="lead">歡迎透過以下方式預約或諮詢，我們期待為您服務。</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-list reveal">
+            <article class="info"><h3>服務地址</h3><p>台北市大安區復興南路一段XXX號<br>捷運大安站 3 號出口步行 5 分鐘</p></article>
+            <article class="info"><h3>營業時間</h3><p>週一至週六 10:00 - 21:00<br>週日公休（可預約）</p></article>
+            <article class="info"><h3>預約電話</h3><p>02-XXXX-XXXX<br>歡迎來電預約諮詢</p></article>
+            <article class="info"><h3>LINE 官方帳號</h3><p>加入官方 LINE 帳號，即時查詢空檔、線上預約更方便！</p><p style="margin-top:14px"><a class="btn btn-primary" href="https://line.me/ti/p/~你的ID">加入 LINE 預約</a></p></article>
+          </div>
+          <form class="form reveal" action="#" method="post">
+            <h3>線上預約表單</h3>
+            <div class="fields">
+              <div class="field"><label for="name">姓名 *</label><input id="name" name="name" type="text" placeholder="您的姓名" required></div>
+              <div class="field"><label for="phone">電話 *</label><input id="phone" name="phone" type="tel" placeholder="09XX-XXX-XXX" required></div>
+              <div class="field"><label for="service">預約服務 *</label><select id="service" name="service" required><option value="">請選擇服務項目</option><option>專業牛角鬆筋 (60min / $1,200)</option><option>砭石舒壓療程 (75min / $1,500)</option><option>客製化全身調理 (90min / $2,000)</option></select></div>
+              <div class="field"><label for="time">希望預約時間</label><input id="time" name="time" type="datetime-local"></div>
+              <div class="field full"><label for="message">身體狀況或特殊需求</label><textarea id="message" name="message" placeholder="請描述您的身體狀況或特殊需求..."></textarea></div>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:18px;border:0;cursor:pointer">送出預約</button>
+            <p class="form-note">目前為靜態 GitHub Pages 版本，表單尚未串接後台；正式上線可改接 Google Form、Formspree 或直接導向 LINE 預約。</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>清郁 QING YU</strong><br>深層筋膜放鬆・身心平衡調理</div>
+      <div>© <span id="year"></span> 清郁. All rights reserved.</div>
     </div>
-</section>
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>講師介紹：【匠心 ‧ 專業團隊夥伴】</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>開課資訊：【技藝 ‧ 傳承班】</h2>
-									<p>最新課程資訊，讓變美與健康成為您的日常</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>公開教學影片：【手感 ‧ 視訊講堂】</h2>
-									<p>透過影像紀錄，讓您親眼見證鬆筋技藝中「點、線、面」的精準與堅持。我們不只調理身體，更是在傳遞一份安定人心的力量。</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+  </footer>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>專業方案 —— 打造全方位的舒活體驗</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>【深度修復】鬆筋調理</h3>
-									<p>針對現代人常見的肩頸緊繃與情緒壓力，提供最到位的深度放鬆方案。</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>【健康管理】身心平衡顧問</h3>
-									<p>融合多年實務經驗，為您提供系統化且易執行的個人健康改善建議。</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>【知識傳承】技藝相授</h3>
-									<p>具備豐富的產業人才培訓經驗，協助學員將技藝化為職涯新動力。</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>【企業賦能】職場舒壓專案</h3>
-									<p>連結 ESG 理念，協助企業推動「職場健康促進」評估，讓員工與企業共好。</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-											
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('目前表單尚未串接後台，請改用 LINE 或電話預約。');
+    });
+  </script>
+</body>
 </html>
